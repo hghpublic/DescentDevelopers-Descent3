@@ -1,0 +1,18 @@
+{
+    "cmake.generator": "Ninja",
+    "cmake.configureSettings": {
+        "CMAKE_TOOLCHAIN_FILE": "${env:VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+    },
+    "cmake.debugConfig": {
+        "args": ["-chpro", "-nomousegrab", "-setdir", "D:/hgh/downloads/devel/descent/gog/setup_descent_1.4a_(16596)/Descent 3"]
+    },
+    "files.insertFinalNewline": true,
+    "editor.detectIndentation": false,
+    "editor.rulers": [80],
+    "C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
+        "cppcoreguidelines-avoid-magic-numbers"
+    ],
+    "C_Cpp.codeAnalysis.exclude": {
+        "**/build": true
+    }
+}
