@@ -1,0 +1,160 @@
+[main] Building folder: /workspaces/DescentDevelopers-Descent3/builds/linux Descent3
+[build] Starting build
+[proc] Executing command: /usr/local/bin/cmake --build /workspaces/DescentDevelopers-Descent3/builds/linux --target Descent3 --
+[build] [1/279] Running utility command for get_git_hash
+[build] -- Git hash is 175a270f
+
+...
+
+
+[build] [75/279] Building CXX object netcon/inetfile/CMakeFiles/inetfile.dir/Debug/httpclient.cpp.o
+[build] FAILED: netcon/inetfile/CMakeFiles/inetfile.dir/Debug/httpclient.cpp.o 
+[build] /usr/bin/c++ -DCHECKSUM=2273889835UL -DCPPHTTPLIB_BROTLI_SUPPORT -DCPPHTTPLIB_USE_NON_BLOCKING_GETADDRINFO -DPOSIX -DPRIMARY_HOG=\"d3-linux.hog\" -D_DEBUG -D_USE_OGL_ACTIVE_TEXTURES -D__LINUX__ -DCMAKE_INTDIR=\"Debug\" -I/workspaces/DescentDevelopers-Descent3/cfile -I/workspaces/DescentDevelopers-Descent3/ddebug -I/workspaces/DescentDevelopers-Descent3/fix -I/workspaces/DescentDevelopers-Descent3/lib -I/workspaces/DescentDevelopers-Descent3/linux -I/workspaces/DescentDevelopers-Descent3/Descent3 -I/workspaces/DescentDevelopers-Descent3/netcon/includes -I/workspaces/DescentDevelopers-Descent3/netcon/inetfile -I/workspaces/DescentDevelopers-Descent3/netcon/inetfile/mem -I/workspaces/DescentDevelopers-Descent3/ddio -isystem /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include -g -std=c++17 -fPIC -finput-charset=UTF-8 -fexec-charset=UTF-8 -Wno-multichar -Wall -MD -MT netcon/inetfile/CMakeFiles/inetfile.dir/Debug/httpclient.cpp.o -MF netcon/inetfile/CMakeFiles/inetfile.dir/Debug/httpclient.cpp.o.d -o netcon/inetfile/CMakeFiles/inetfile.dir/Debug/httpclient.cpp.o -c /workspaces/DescentDevelopers-Descent3/netcon/inetfile/httpclient.cpp
+[build] In file included from /workspaces/DescentDevelopers-Descent3/netcon/inetfile/httpclient.cpp:19:
+[build] /workspaces/DescentDevelopers-Descent3/netcon/inetfile/httpclient.h:49:66: error: 'Progress' in namespace 'httplib' does not name a type
+[build]    49 |   httplib::Result Get(const std::string &URIPath, const httplib::Progress &progress);
+[build]       |                                                                  ^~~~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/netcon/inetfile/httpclient.h:54:38: error: 'Progress' in namespace 'httplib' does not name a type
+[build]    54 |                       const httplib::Progress &progress);
+[build]       |                                      ^~~~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/netcon/inetfile/httpclient.cpp:33:76: error: 'Progress' in namespace 'httplib' does not name a type
+[build]    33 | httplib::Result HttpClient::Get(const std::string &URIPath, const httplib::Progress &progress) {
+[build]       |                                                                            ^~~~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/netcon/inetfile/httpclient.cpp: In member function 'httplib::Result D3::HttpClient::Get(const std::string&, const int&)':
+[build] /workspaces/DescentDevelopers-Descent3/netcon/inetfile/httpclient.cpp:34:23: error: no matching function for call to 'httplib::Client::Get(const std::string&, const int&)'
+[build]    34 |   return m_client->Get(URIPath, progress);
+[build]       |          ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+[build] In file included from /workspaces/DescentDevelopers-Descent3/netcon/inetfile/httpclient.h:26:
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11333:15: note: candidate: 'httplib::Result httplib::Client::Get(const std::string&, httplib::DownloadProgress)'
+[build] 11333 | inline Result Client::Get(const std::string &path, DownloadProgress progress) {
+[build]       |               ^~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11333:69: note:   no known conversion for argument 2 from 'const int' to 'httplib::DownloadProgress' {aka 'std::function<bool(long unsigned int, long unsigned int)>'}
+[build] 11333 | inline Result Client::Get(const std::string &path, DownloadProgress progress) {
+[build]       |                                                    ~~~~~~~~~~~~~~~~~^~~~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11340:15: note: candidate: 'httplib::Result httplib::Client::Get(const std::string&, httplib::ContentReceiver, httplib::DownloadProgress)'
+[build] 11340 | inline Result Client::Get(const std::string &path,
+[build]       |               ^~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11341:43: note:   no known conversion for argument 2 from 'const int' to 'httplib::ContentReceiver' {aka 'std::function<bool(const char*, long unsigned int)>'}
+[build] 11341 |                           ContentReceiver content_receiver,
+[build]       |                           ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11351:15: note: candidate: 'httplib::Result httplib::Client::Get(const std::string&, httplib::ResponseHandler, httplib::ContentReceiver, httplib::DownloadProgress)'
+[build] 11351 | inline Result Client::Get(const std::string &path,
+[build]       |               ^~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11351:15: note:   candidate expects 4 arguments, 2 provided
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11336:15: note: candidate: 'httplib::Result httplib::Client::Get(const std::string&, const httplib::Headers&, httplib::DownloadProgress)'
+[build] 11336 | inline Result Client::Get(const std::string &path, const Headers &headers,
+[build]       |               ^~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11336:67: note:   no known conversion for argument 2 from 'const int' to 'const httplib::Headers&' {aka 'const std::unordered_multimap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char>, httplib::detail::case_ignore::hash, httplib::detail::case_ignore::equal_to>&'}
+[build] 11336 | inline Result Client::Get(const std::string &path, const Headers &headers,
+[build]       |                                                    ~~~~~~~~~~~~~~~^~~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11345:15: note: candidate: 'httplib::Result httplib::Client::Get(const std::string&, const httplib::Headers&, httplib::ContentReceiver, httplib::DownloadProgress)'
+[build] 11345 | inline Result Client::Get(const std::string &path, const Headers &headers,
+[build]       |               ^~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11345:15: note:   candidate expects 4 arguments, 2 provided
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11358:15: note: candidate: 'httplib::Result httplib::Client::Get(const std::string&, const httplib::Headers&, httplib::ResponseHandler, httplib::ContentReceiver, httplib::DownloadProgress)'
+[build] 11358 | inline Result Client::Get(const std::string &path, const Headers &headers,
+[build]       |               ^~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11358:15: note:   candidate expects 5 arguments, 2 provided
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11365:15: note: candidate: 'httplib::Result httplib::Client::Get(const std::string&, const httplib::Params&, const httplib::Headers&, httplib::DownloadProgress)'
+[build] 11365 | inline Result Client::Get(const std::string &path, const Params &params,
+[build]       |               ^~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11365:15: note:   candidate expects 4 arguments, 2 provided
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11369:15: note: candidate: 'httplib::Result httplib::Client::Get(const std::string&, const httplib::Params&, const httplib::Headers&, httplib::ContentReceiver, httplib::DownloadProgress)'
+[build] 11369 | inline Result Client::Get(const std::string &path, const Params &params,
+[build]       |               ^~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11369:15: note:   candidate expects 5 arguments, 2 provided
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11376:15: note: candidate: 'httplib::Result httplib::Client::Get(const std::string&, const httplib::Params&, const httplib::Headers&, httplib::ResponseHandler, httplib::ContentReceiver, httplib::DownloadProgress)'
+[build] 11376 | inline Result Client::Get(const std::string &path, const Params &params,
+[build]       |               ^~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11376:15: note:   candidate expects 6 arguments, 2 provided
+[build] /workspaces/DescentDevelopers-Descent3/netcon/inetfile/httpclient.cpp: At global scope:
+[build] /workspaces/DescentDevelopers-Descent3/netcon/inetfile/httpclient.cpp:42:36: error: 'Progress' in namespace 'httplib' does not name a type
+[build]    42 |                     const httplib::Progress &progress) {
+[build]       |                                    ^~~~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/netcon/inetfile/httpclient.cpp: In member function 'httplib::Result D3::HttpClient::Get(const std::string&, const httplib::ContentReceiver&, const int&)':
+[build] /workspaces/DescentDevelopers-Descent3/netcon/inetfile/httpclient.cpp:43:23: error: no matching function for call to 'httplib::Client::Get(const std::string&, const httplib::ContentReceiver&, const int&)'
+[build]    43 |   return m_client->Get(URIPath, content_receiver, progress);
+[build]       |          ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11333:15: note: candidate: 'httplib::Result httplib::Client::Get(const std::string&, httplib::DownloadProgress)'
+[build] 11333 | inline Result Client::Get(const std::string &path, DownloadProgress progress) {
+[build]       |               ^~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11333:15: note:   candidate expects 2 arguments, 3 provided
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11340:15: note: candidate: 'httplib::Result httplib::Client::Get(const std::string&, httplib::ContentReceiver, httplib::DownloadProgress)'
+[build] 11340 | inline Result Client::Get(const std::string &path,
+[build]       |               ^~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11342:44: note:   no known conversion for argument 3 from 'const int' to 'httplib::DownloadProgress' {aka 'std::function<bool(long unsigned int, long unsigned int)>'}
+[build] 11342 |                           DownloadProgress progress) {
+[build]       |                           ~~~~~~~~~~~~~~~~~^~~~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11351:15: note: candidate: 'httplib::Result httplib::Client::Get(const std::string&, httplib::ResponseHandler, httplib::ContentReceiver, httplib::DownloadProgress)'
+[build] 11351 | inline Result Client::Get(const std::string &path,
+[build]       |               ^~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11352:43: note:   no known conversion for argument 2 from 'function<bool(const char*, long unsigned int)>' to 'function<bool(const httplib::Response&)>'
+[build] 11352 |                           ResponseHandler response_handler,
+[build]       |                           ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11336:15: note: candidate: 'httplib::Result httplib::Client::Get(const std::string&, const httplib::Headers&, httplib::DownloadProgress)'
+[build] 11336 | inline Result Client::Get(const std::string &path, const Headers &headers,
+[build]       |               ^~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11336:67: note:   no known conversion for argument 2 from 'const httplib::ContentReceiver' {aka 'const std::function<bool(const char*, long unsigned int)>'} to 'const httplib::Headers&' {aka 'const std::unordered_multimap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char>, httplib::detail::case_ignore::hash, httplib::detail::case_ignore::equal_to>&'}
+[build] 11336 | inline Result Client::Get(const std::string &path, const Headers &headers,
+[build]       |                                                    ~~~~~~~~~~~~~~~^~~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11345:15: note: candidate: 'httplib::Result httplib::Client::Get(const std::string&, const httplib::Headers&, httplib::ContentReceiver, httplib::DownloadProgress)'
+[build] 11345 | inline Result Client::Get(const std::string &path, const Headers &headers,
+[build]       |               ^~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11345:67: note:   no known conversion for argument 2 from 'const httplib::ContentReceiver' {aka 'const std::function<bool(const char*, long unsigned int)>'} to 'const httplib::Headers&' {aka 'const std::unordered_multimap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char>, httplib::detail::case_ignore::hash, httplib::detail::case_ignore::equal_to>&'}
+[build] 11345 | inline Result Client::Get(const std::string &path, const Headers &headers,
+[build]       |                                                    ~~~~~~~~~~~~~~~^~~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11358:15: note: candidate: 'httplib::Result httplib::Client::Get(const std::string&, const httplib::Headers&, httplib::ResponseHandler, httplib::ContentReceiver, httplib::DownloadProgress)'
+[build] 11358 | inline Result Client::Get(const std::string &path, const Headers &headers,
+[build]       |               ^~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11358:15: note:   candidate expects 5 arguments, 3 provided
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11365:15: note: candidate: 'httplib::Result httplib::Client::Get(const std::string&, const httplib::Params&, const httplib::Headers&, httplib::DownloadProgress)'
+[build] 11365 | inline Result Client::Get(const std::string &path, const Params &params,
+[build]       |               ^~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11365:66: note:   no known conversion for argument 2 from 'const httplib::ContentReceiver' {aka 'const std::function<bool(const char*, long unsigned int)>'} to 'const httplib::Params&' {aka 'const std::multimap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >&'}
+[build] 11365 | inline Result Client::Get(const std::string &path, const Params &params,
+[build]       |                                                    ~~~~~~~~~~~~~~^~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11369:15: note: candidate: 'httplib::Result httplib::Client::Get(const std::string&, const httplib::Params&, const httplib::Headers&, httplib::ContentReceiver, httplib::DownloadProgress)'
+[build] 11369 | inline Result Client::Get(const std::string &path, const Params &params,
+[build]       |               ^~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11369:15: note:   candidate expects 5 arguments, 3 provided
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11376:15: note: candidate: 'httplib::Result httplib::Client::Get(const std::string&, const httplib::Params&, const httplib::Headers&, httplib::ResponseHandler, httplib::ContentReceiver, httplib::DownloadProgress)'
+[build] 11376 | inline Result Client::Get(const std::string &path, const Params &params,
+[build]       |               ^~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include/httplib.h:11376:15: note:   candidate expects 6 arguments, 3 provided
+[build] [76/279] Building CXX object scripts/CMakeFiles/LevelS1.dir/Debug/LevelS1.cpp.o
+[build] [77/279] Building CXX object scripts/CMakeFiles/level8.dir/Debug/level8.cpp.o
+[build] [78/279] Linking CXX shared module scripts/Debug/level4.so
+[build] [79/279] Building CXX object scripts/CMakeFiles/level7.dir/Debug/level7.cpp.o
+[build] [80/279] Linking CXX shared module scripts/Debug/level5.so
+[build] [81/279] Building CXX object scripts/CMakeFiles/Level6.dir/Debug/Level6.cpp.o
+[build] [82/279] Building CXX object scripts/CMakeFiles/Level9.dir/Debug/Level9.cpp.o
+[build] [83/279] Building CXX object scripts/CMakeFiles/levelS2.dir/Debug/levelS2.cpp.o
+[build] [84/279] Building CXX object netcon/descent3onlineclient/CMakeFiles/Descent3_Online_TCP_IP.dir/Debug/dip_gametrack.cpp.o
+[build] FAILED: netcon/descent3onlineclient/CMakeFiles/Descent3_Online_TCP_IP.dir/Debug/dip_gametrack.cpp.o 
+[build] /usr/bin/c++ -DCHECKSUM=2273889835UL -DCPPHTTPLIB_BROTLI_SUPPORT -DCPPHTTPLIB_USE_NON_BLOCKING_GETADDRINFO -DDescent3_Online_TCP_IP_EXPORTS -DPOSIX -DPRIMARY_HOG=\"d3-linux.hog\" -D_DEBUG -D_USE_OGL_ACTIVE_TEXTURES -D__LINUX__ -DCMAKE_INTDIR=\"Debug\" -I/workspaces/DescentDevelopers-Descent3/cfile -I/workspaces/DescentDevelopers-Descent3/ddebug -I/workspaces/DescentDevelopers-Descent3/fix -I/workspaces/DescentDevelopers-Descent3/lib -I/workspaces/DescentDevelopers-Descent3/linux -I/workspaces/DescentDevelopers-Descent3/Descent3 -I/workspaces/DescentDevelopers-Descent3/netcon/includes -I/workspaces/DescentDevelopers-Descent3/ddio -I/workspaces/DescentDevelopers-Descent3/netcon/inetfile -I/workspaces/DescentDevelopers-Descent3/netcon/inetfile/mem -I/workspaces/DescentDevelopers-Descent3/misc -I/workspaces/DescentDevelopers-Descent3/module -I/workspaces/DescentDevelopers-Descent3/ui -isystem /workspaces/DescentDevelopers-Descent3/builds/linux/vcpkg_installed/arm64-linux/include -g -std=c++17 -fPIC -fvisibility=hidden -finput-charset=UTF-8 -fexec-charset=UTF-8 -Wno-multichar -Wall -MD -MT netcon/descent3onlineclient/CMakeFiles/Descent3_Online_TCP_IP.dir/Debug/dip_gametrack.cpp.o -MF netcon/descent3onlineclient/CMakeFiles/Descent3_Online_TCP_IP.dir/Debug/dip_gametrack.cpp.o.d -o netcon/descent3onlineclient/CMakeFiles/Descent3_Online_TCP_IP.dir/Debug/dip_gametrack.cpp.o -c /workspaces/DescentDevelopers-Descent3/netcon/descent3onlineclient/dip_gametrack.cpp
+[build] In file included from /workspaces/DescentDevelopers-Descent3/netcon/descent3onlineclient/dip_gametrack.cpp:28:
+[build] /workspaces/DescentDevelopers-Descent3/netcon/inetfile/httpclient.h:49:66: error: 'Progress' in namespace 'httplib' does not name a type
+[build]    49 |   httplib::Result Get(const std::string &URIPath, const httplib::Progress &progress);
+[build]       |                                                                  ^~~~~~~~
+[build] /workspaces/DescentDevelopers-Descent3/netcon/inetfile/httpclient.h:54:38: error: 'Progress' in namespace 'httplib' does not name a type
+[build]    54 |                       const httplib::Progress &progress);
+[build]       |                                      ^~~~~~~~
+[build] [85/279] Building CXX object scripts/CMakeFiles/Merc02.dir/Debug/Merc02.cpp.o
+[build] [86/279] Building CXX object scripts/CMakeFiles/Merc4.dir/Debug/Merc4.cpp.o
+[build] [87/279] Building CXX object scripts/CMakeFiles/Merc1.dir/Debug/Merc1.cpp.o
+[build] [88/279] Building CXX object scripts/CMakeFiles/merc5.dir/Debug/merc5.cpp.o
+[build] [89/279] Building CXX object scripts/CMakeFiles/Merc6.dir/Debug/Merc6.cpp.o
+[build] [90/279] Building CXX object scripts/CMakeFiles/Merc3.dir/Debug/Merc3.cpp.o
+[build] In file included from /workspaces/DescentDevelopers-Descent3/scripts/Merc3.cpp:31:
+[build] /workspaces/DescentDevelopers-Descent3/scripts/osiris_vector.h:26: warning: ignoring '#pragma warning ' [-Wunknown-pragmas]
+[build]    26 | #pragma warning(disable : 4244)
+[build] [91/279] Building CXX object scripts/CMakeFiles/myPowerHouse.dir/Debug/myPowerHouse.cpp.o
+[build] [92/279] Building CXX object scripts/CMakeFiles/Merc7.dir/Debug/Merc7.cpp.o
+[build] /workspaces/DescentDevelopers-Descent3/scripts/Merc7.cpp: In function 'int FIND_FREE_INDEX(unsigned int, unsigned int, bool)':
+[build] /workspaces/DescentDevelopers-Descent3/scripts/Merc7.cpp:1369:17: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+[build]  1369 |   for (i = 0; i < max_items; i++) {
+[build]       |               ~~^~~~~~~~~~~
+[build] ninja: build stopped: subcommand failed.
+[proc] The command: /usr/local/bin/cmake --build /workspaces/DescentDevelopers-Descent3/builds/linux --target Descent3 -- exited with code: 1
+[driver] Build completed: 00:00:02.776
+[build] Build finished with exit code 1
