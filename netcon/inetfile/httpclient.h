@@ -46,12 +46,12 @@ public:
    * @param URIPath requested path (for example, "/some_dir/my_file.txt")
    * @return standard HTTP code. 200 means is OK.
    */
-  httplib::Result Get(const std::string &URIPath, const httplib::Progress &progress);
+  httplib::Result Get(const std::string &URIPath, const httplib::DownloadProgress &progress);
 
   httplib::Result Get(const std::string &URIPath, const httplib::ContentReceiver &content_receiver);
 
   httplib::Result Get(const std::string &URIPath, const httplib::ContentReceiver &content_receiver,
-                      const httplib::Progress &progress);
+                      const httplib::DownloadProgress &progress);
 
   void SetProxy(const std::string &proxy_host, uint16_t port);
 
