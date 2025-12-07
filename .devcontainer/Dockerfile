@@ -70,8 +70,8 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
         alsa-utils \
         beep \
         libsndfile1-dev \
-        pulseaudio \
         libsox-fmt-pulse \
+        pulseaudio \
         sox \
     && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
@@ -79,14 +79,14 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends \
         autoconf \
-        libtool \
         libgl1-mesa-dev \
         libglu1-mesa-dev \
+        libltdl-dev \
+        libtool \
+        libudev-dev \
         libxcursor-dev \
         python3-jinja2 \
         python3-pip \
-        libltdl-dev \
-        libudev-dev \
     && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
     
