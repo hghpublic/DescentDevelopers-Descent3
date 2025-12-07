@@ -1,5 +1,4 @@
 {
-  "builtin-baseline": "8f90c294883ccf67d2f4953383718aeae981575f",
   "dependencies": [
     "cpp-httplib",
     "glm",
@@ -7,26 +6,17 @@
     "plog",
     {
       "name": "sdl3",
-      "version>=": "3.2.6",
       "features": ["x11","wayland", "alsa"],
       "platform": "linux"
     },
     {
       "name": "sdl3",
-      "version>=": "3.2.6",
       "platform": "!linux"
     },
     {
       "name": "libxcrypt",
-      "version>=": "4.4.38",
       "platform": "linux"
     },
     "zlib"
-  ],
-  "overrides": [
-    {
-      "name": "sdl3",
-      "version": "3.2.6"
-    }
- ]
+  ]
 }
